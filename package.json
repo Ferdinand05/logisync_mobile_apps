@@ -25,6 +25,8 @@
     "@capacitor/status-bar": "8.0.4",
     "@ionic/vue": "^9.0.0",
     "@ionic/vue-router": "^9.0.0",
+    "@tanstack/vue-query": "^5.107.1",
+    "axios": "^1.21.1",
     "ionicons": "^8.1.0",
     "vue": "^3.5.0",
     "vue-router": "^5.0.0"
@@ -52,5 +54,9 @@
     "vue-tsc": "^3.3.5"
   },
   "prettier": "@ionic/prettier-config",
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "allowScripts": {
+    "core-js@3.51.0": true,
+    "vue-demi@0.14.10": true
+  }
 }
