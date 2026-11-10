@@ -1,0 +1,7 @@
+{
+  "name": "logisync_mobileapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
