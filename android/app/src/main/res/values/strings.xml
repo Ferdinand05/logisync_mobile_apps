@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Logisync</string>
+    <string name="title_activity_main">Logisync</string>
+    <string name="package_name">com.logisync.warehouse</string>
+    <string name="custom_url_scheme">com.logisync.warehouse</string>
+</resources>

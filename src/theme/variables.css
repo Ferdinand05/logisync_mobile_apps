@@ -1,2 +1,88 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+/* Logisync design system — light theme only (see CONTEXT.md). */
+
+:root {
+  /* Brand palette */
+  --logisync-primary: #2563eb;
+  --logisync-primary-soft: #eef3ff;
+  --logisync-brand-ink: #222e3d;
+  --logisync-brand-orange: #f89b13;
+  --logisync-success: #059669;
+  --logisync-warning: #d97706;
+  --logisync-danger: #dc2626;
+  --logisync-page-bg: #f4f5f8;
+  --logisync-surface: #ffffff;
+  --logisync-text: #1f2937;
+  --logisync-text-muted: #6b7280;
+  --logisync-border: #e5e7eb;
+
+  /* Typography */
+  --ion-font-family: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Ionic primary */
+  --ion-color-primary: #2563eb;
+  --ion-color-primary-rgb: 37, 99, 235;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #1d4ed8;
+  --ion-color-primary-tint: #3b82f6;
+
+  /* Ionic success (stock in) */
+  --ion-color-success: #059669;
+  --ion-color-success-rgb: 5, 150, 105;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #047857;
+  --ion-color-success-tint: #10b981;
+
+  /* Ionic warning (scan) */
+  --ion-color-warning: #d97706;
+  --ion-color-warning-rgb: 217, 119, 6;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #b45309;
+  --ion-color-warning-tint: #f59e0b;
+
+  /* Ionic danger (audit / delete) */
+  --ion-color-danger: #dc2626;
+  --ion-color-danger-rgb: 220, 38, 38;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #b91c1c;
+  --ion-color-danger-tint: #ef4444;
+
+  /* Surfaces & text */
+  --ion-background-color: #f4f5f8;
+  --ion-background-color-rgb: 244, 245, 248;
+  --ion-text-color: #1f2937;
+  --ion-text-color-rgb: 31, 41, 55;
+  --ion-card-background: #ffffff;
+  --ion-item-background: #ffffff;
+
+  /* Bottom tabs */
+  --ion-tab-bar-background: #ffffff;
+  --ion-tab-bar-color: #6b7280;
+  --ion-tab-bar-color-selected: #2563eb;
+  --ion-tab-bar-border-color: #e5e7eb;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--ion-font-family);
+}
+
+ion-content {
+  --background: var(--logisync-page-bg);
+}
+
+ion-toolbar {
+  --background: #ffffff;
+  --border-width: 0;
+}
+
+.app-tab-bar {
+  border-top: 1px solid var(--logisync-border);
+  padding-bottom: env(safe-area-inset-bottom);
+}

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
-    <title>Ionic App</title>
+    <title>Logisync</title>
 
     <base href="/" />
 
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
     <meta
       name="viewport"
       content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -15,17 +16,56 @@
     <meta name="msapplication-tap-highlight" content="no" />
 
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" as="image" href="/img/splash.webp" fetchpriority="high" />
 
     <!-- add to homescreen for ios -->
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Ionic App" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Logisync" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #f4f5f8;
+      }
+
+      #boot-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        background: #ffffff;
+        transition: opacity 250ms ease;
+      }
+
+      #boot-splash img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #boot-splash.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #boot-splash {
+          transition: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <div id="app"></div>
+
+    <div id="boot-splash" role="status" aria-label="Memuat Logisync">
+      <img src="/img/splash.webp" alt="" />
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
-
 </html>
-

@@ -7,7 +7,16 @@ import globals from 'globals';
 export default [
   ...defineConfigWithVueTs(
     {
-      ignores: ['dist/**', 'android/**', 'ios/**', 'playwright-report/**', 'test-results/**', 'blob-report/**'],
+      ignores: [
+        'dist/**',
+        'android/**',
+        'ios/**',
+        'playwright-report/**',
+        'test-results/**',
+        'blob-report/**',
+        '.agents/**',
+        '.impeccable/**',
+      ],
     },
     js.configs.recommended,
     pluginVue.configs['flat/essential'],
@@ -30,6 +39,14 @@ export default [
       'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
       'vue/no-deprecated-slot-attribute': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
+  {
+    // View filenames follow the structure defined in CONTEXT.md (Home.vue,
+    // Login.vue, ...), so single-word names are intentional here.
+    files: ['src/views/**/*.vue'],
+    rules: {
+      'vue/multi-word-component-names': 'off',
     },
   },
   {
